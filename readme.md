@@ -208,6 +208,7 @@ This variant runs entirely in Azure with no local server or scheduled task requi
 Before importing the Runbook, ensure the following are configured in your Azure Automation Account:
 
 1. **PowerShell modules** imported under *Modules*:
+   - `Microsoft.Graph.Authentication`
    - `Microsoft.Graph.Users`
    - `Microsoft.Graph.PersonalContacts`
 
@@ -228,6 +229,7 @@ Before importing the Runbook, ensure the following are configured in your Azure 
 The same app registration used for the original script works here. Ensure it has:
 - `Contacts.ReadWrite` (Application permission)
 - `User.Read.All` (Application permission)
+- `OrgContact.Read.All` (Application permission)
 - The certificate uploaded under **Certificates & secrets**
 
 ### Importing the Runbook
